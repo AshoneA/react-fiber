@@ -1,0 +1,3 @@
+## stack
+
+react 16之前采用了recurse来遍历virtual dom tree, recurse最大的问题就是当tree特别大的时候，recurse遍历会导致stack特别大，需要花费很多的时间，并且因为stack的问题，导致不能拆开来执行，一旦开始就无法中断并继续。reconciliation采用stack的形式，在reconciliation的时候前端是没有响应的，导致前端用户体验很差，因而fiber最核心的算法可以说是react重新实现了stack，使其能够中断，继续....

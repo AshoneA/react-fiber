@@ -1,0 +1,3 @@
+# react fiber learning
+
+react16之后内部的reconciliation采用了fiber，比之前的virtual dom复杂了许多，一步一步的了解fiber架构
