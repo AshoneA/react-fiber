@@ -1,7 +1,4 @@
-// Import stylesheets
-import './style.css';
-
-// Write Javascript code!
+// 最简单的fiber遍历实现，跟实际出入很大，但是核心算法是一致的
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>Linked list traversal</h1>`;
 
@@ -11,6 +8,7 @@ function log(value) {
   appDiv.appendChild(span);
 }
 
+// mostly simple element struct
 const a1 = {name: 'a1'};
 const b1 = {name: 'b1'};
 const b2 = {name: 'b2'};
@@ -39,6 +37,7 @@ class Node {
     }
 }
 
+// image link is singly link struct
 function link(parent, elements) {
     if (elements === null) elements = [];
 
@@ -52,6 +51,7 @@ function link(parent, elements) {
     return parent.child;
 }
 
+// dowork as preformance work
 function doWork(node) {
     log(node.instance.name);
     const children = node.instance.render();
@@ -61,6 +61,7 @@ function doWork(node) {
 const hostNode = new Node(a1);
 walk(hostNode);
 
+// traval tree
 function walk(o) {
     let root = o;
     let node = o;
